@@ -1,9 +1,9 @@
 # Stage 1: Build React app
 FROM node:20.11.0-alpine as build
 WORKDIR /usr/src/app
-COPY ./frontend/package*.json ./
+COPY package*.json ./
 RUN npm ci --omit=dev
-COPY ./frontend ./
+COPY . .
 RUN npm run build
 
 # Stage 2: Serve build folder with simple HTTP server
