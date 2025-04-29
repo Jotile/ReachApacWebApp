@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 
 export function Header() {
     return (
-        <header className="bg-primary text-white py-4 shadow-md">
+        <header className="fixed top-0 left-0 w-full bg-primary text-white py-4 shadow-md z-50">
           <div className="container mx-auto flex justify-between items-center px-4">
             <Link to="/">
               <img src={logo} alt="Reach APAC Logo" className="w-12 md:w-16" />

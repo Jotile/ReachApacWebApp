@@ -27,7 +27,7 @@ export function Contact() {
         };
 
         try {
-            const response = await fetch("http://localhost:5000/send-email", {
+            const response = await fetch("https://reachapacservice.azurewebsites.net/send-email", {
                 method: "POST",
                 headers: {
                 "Content-Type": "application/json",
