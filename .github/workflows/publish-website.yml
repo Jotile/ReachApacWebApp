@@ -38,12 +38,11 @@ jobs:
             - name: Build and push container image to registry
               uses: docker/build-push-action@v4
               with:
-                  with:
-                  context: ./frontend
-                  push: true
-                  tags: ghcr.io/${{ env.REPO }}:${{ github.sha }}
-                  file: ./frontend/Dockerfile
-                  no-cache: true
+                context: ./frontend
+                push: true
+                tags: ghcr.io/${{ env.REPO }}:${{ github.sha }}
+                file: ./frontend/Dockerfile
+                no-cache: true
         
     deploy:
         runs-on: ubuntu-latest
