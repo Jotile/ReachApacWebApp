@@ -22,7 +22,7 @@ app.post('/send-email', (req, res) => {
     const { name, email, message } = req.body;
     const mailOptions = {
       from: email,
-      to: 'otilejacob17@gmail.com',
+      to: 'info@reachapac.org',
       subject: `Message from ${name}`,
       text: `Message: ${message}\nFrom: ${name}\nEmail: ${email}`,
     };
