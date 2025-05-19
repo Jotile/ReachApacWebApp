@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.png";
 import ReactPlayer from "react-player";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import AOS from "aos";
@@ -25,22 +25,19 @@ export function Home() {
     };
 
     const outreachImages = [
-        "/assets/images/87e1dc1a-e972-4c66-835e-e26bb5b93ac6.JPG",
+        "/assets/images/IMG_4958.png",
+        "/assets/images/IMG_3193.png",
         "/assets/images/92d073c6-5f2d-44a7-8912-ca1a0708f020.JPG",
         "/assets/images/46320bde-6a49-4f2f-8f11-e90928174e98.JPG",
         "/assets/images/ae8d9c2a-3ca9-410f-a604-8d666c31a046.JPG",
-        "/assets/images/ba33ce0b-fc5a-4160-9f3f-44d1979a09de.JPG",
-        "/assets/images/IMG_3193.JPG",
         "/assets/images/IMG_3344.JPG",
-        "/assets/images/IMG_3345.JPG",
-        "/assets/images/IMG_3646.JPG",
         "/assets/images/IMG_4147.JPG",
-        "/assets/images/IMG_4148.JPG",
+        "/assets/images/IMG_5258.JPG",
+        "/assets/images/87e1dc1a-e972-4c66-835e-e26bb5b93ac6.JPG",
+        "/assets/images/image0.jpeg",
         "/assets/images/IMG_4789.JPG",
-        "/assets/images/IMG_4790.JPG",
         "/assets/images/IMG_4822.JPG",
         "/assets/images/IMG_4829.JPG",
-        "/assets/images/IMG_5258.JPG",
         "/assets/images/IMG_5620.JPG",
     ];
 
@@ -61,14 +58,14 @@ export function Home() {
                 <div className="absolute inset-0 bg-black opacity-50"></div>
             </div>
             <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white px-6 text-center">
-                <motion.img
+                {/* <motion.img
                     src={logo}
                     alt="Reach APAC Logo"
                     className="mx-auto w-40 mb-6"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.3, duration: 0.6 }}
-                />
+                /> */}
                 <motion.h1
                     className="text-4xl md:text-5xl font-cinzel mb-4 text-primary text-center"
                     initial={{ opacity: 0, y: -30 }}

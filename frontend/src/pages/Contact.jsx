@@ -82,7 +82,7 @@ export function Contact() {
                     <div className="space-y-6">
                         <div className="flex items-start gap-4">
                             <MdEmail className="text-2xl text-primary" />
-                            <span>otilejacob17@gmail.com</span>
+                            <span>info@reachapac.org</span>
                         </div>
                         <div className="flex items-start gap-4">
                             <MdLocationOn className="text-2xl text-primary" />
