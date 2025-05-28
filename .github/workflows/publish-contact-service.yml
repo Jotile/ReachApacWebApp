@@ -34,6 +34,9 @@ jobs:
         
             - name: Lowercase the repo name
               run: echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
+            
+            - name: Write Firebase service account secret to a file
+              run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}" > ./backend/serviceAccountKey.json
         
             - name: Build and push container image to registry
               uses: docker/build-push-action@v4
