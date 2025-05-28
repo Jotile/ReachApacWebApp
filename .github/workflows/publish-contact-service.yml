@@ -21,6 +21,18 @@ jobs:
         
         steps:
             - uses: actions/checkout@v4
+
+            - name: Set up Azure CLI
+              uses: azure/setup-azure-cli@v1
+
+            - name: Log in to Azure using Storage Account Key
+              run: |
+                az storage blob download \
+                  --account-name reachapac \
+                  --container-name reachapackeys \
+                  --name serviceAccountKey.json \
+                  --file ./backend/serviceAccountKey.json \
+                  --account-key ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }}
         
             - name: Set up Docker Buildx
               uses: docker/setup-buildx-action@v2
@@ -34,9 +46,6 @@ jobs:
         
             - name: Lowercase the repo name
               run: echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
-            
-            - name: Write Firebase service account secret to a file
-              run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}" > ./backend/serviceAccountKey.json
             
             - name: Verify the Firebase service account JSON content
               run: cat ./backend/serviceAccountKey.json
