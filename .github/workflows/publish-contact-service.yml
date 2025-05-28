@@ -22,9 +22,6 @@ jobs:
         steps:
             - uses: actions/checkout@v4
 
-            - name: Set up Azure CLI
-              uses: azure/azure-cli
-
             - name: Log in to Azure using Storage Account Key
               run: |
                 az storage blob download \
