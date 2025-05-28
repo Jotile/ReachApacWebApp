@@ -6,6 +6,7 @@ import { GetInvolved } from "./pages/GetInvolved";
 import { Contact } from "./pages/Contact";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import { ToastContainer } from 'react-toastify';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
             <Route path="/get-involved" element={<GetInvolved />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <ToastContainer position="top-center" autoClose={3000} />
           </main>
           <Footer />
       </div>

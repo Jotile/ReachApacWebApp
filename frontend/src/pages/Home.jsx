@@ -75,7 +75,7 @@ export function Home() {
                     Restoring Lives
                 </motion.h1>
                 <motion.p
-                    className="text-lg md:text-xl mb-8 mx-auto max-w-2xl text-justify"
+                    className="text-lg md:text-xl mb-8 mx-auto text-justify"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.8, duration: 0.6 }}
@@ -105,13 +105,13 @@ export function Home() {
                 </motion.div>
             </div>
             <div className="relative z-10 bg-gradient-to-br from-primary via-secondary to-accent pt-20 pb-10 px-6 md:px-12">
-                <div className="max-w-6xl mx-auto mt-20 bg-white bg-opacity-80 p-8 rounded-2xl shadow-lg">
-                    <h2 className="text-3xl font-bold text-primary mb-6 text-center">Our Journey</h2>
+                <h2 className="text-3xl font-bold text-primary mb-6 text-center">Our Journey</h2>
+                <div className="mx-auto w-full max-w-3xl aspect-video bg-black rounded-lg overflow-hidden shadow-lg">
                     <ReactPlayer
-                        url="/assets/videos/driving-to-town.mp4"
+                        url="/assets/videos/apach-video-1.mp4"
                         controls
                         width="100%"
-                        height="auto"
+                        height="100%"
                     />
                 </div>
                 <div className="max-w-6xl mx-auto mt-20 relative">

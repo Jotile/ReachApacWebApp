@@ -64,7 +64,7 @@ export function About() {
                             <li>Empathetic</li>
                             <li>Accessible</li>
                             <li>Compassionate</li>
-                            <li>Humility</li>
+                            <li>Humble</li>
                         </ul>
                     </motion.div>
                 </div>
