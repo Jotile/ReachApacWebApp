@@ -37,6 +37,9 @@ jobs:
             
             - name: Write Firebase service account secret to a file
               run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}" > ./backend/serviceAccountKey.json
+            
+            - name: Verify the Firebase service account JSON content
+              run: cat ./backend/serviceAccountKey.json
         
             - name: Build and push container image to registry
               uses: docker/build-push-action@v4
