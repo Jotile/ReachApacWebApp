@@ -111,7 +111,7 @@ app.post('/submit-partner', async (req, res) => {
     const mailOptions = {
       from: 'reachapac4@gmail.com',
       to: 'info@reachapac.org',
-      subject: `New Partnership Submission: ${data.fullName || 'Unknown'}`,
+      subject: `New Partnership Submission: ${data.name || 'Unknown'}`,
       html: emailBody,
     };
     transporter.sendMail(mailOptions, (error, info) => {
